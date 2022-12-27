@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*MAIN*/
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(2, 10vh);
+
+    width: 100vw;
+}
+
+/*RUBRIK*/
+.rubrik {
+    grid-column: 2/8;
+    grid-row: 1;
+    z-index: 1;
+}
+
+/*BILD*/
+#bild {
+    background-image: url(bilder/Gamlaprojekt.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 37vw;
+    height: 20vw;
+}  
+
+/*TEXT*/
+
+.mellanrum {
+    padding-top: 5vh;
+}
+
+#divwrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 10vw;
+    margin-top: 10vh;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10vh;
+}
+
+#right {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10vh;
+}
+
+#intro {
+    border-bottom: 1px solid black;
+    
+    margin-right: 10vw;
+    margin-left: 10vw;
+    margin-top: 10vh;
+} 
+
+.questions {
+    width: 40vw;
+    margin-right: 2.5vw;
+    text-align: justify;   
+}
+
+/*SLUT PÅ MAIN*/
+
+/*RESPONSIVE*/
+
+@media(max-width:800px) {
+    #divwrap {
+        flex-direction: column;
+    }
+    .questions {
+        width: 85vw;
+    }
+    #bild {
+        grid-column: 2/10;
+        grid-row: 3/8;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .rubrik {
+        grid-column: 2/10;
+        grid-row: 1;
+        
+    }
+    .row {
+        flex-direction: column;
+        margin-left: 10vw;
+    }
+}

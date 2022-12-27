@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    background: white;
+    font-family: 'helvetica';
+    font-weight: 300;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: x hidden;
+}
+
+/*RUBRIK*/
+.rubrik {
+    grid-column: 2/10;
+    z-index: 1;
+    text-align: center;
+}
+
+/*TEXT*/
+#question-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(200px, auto);
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.grid-element {
+    background-color: rgba(255, 202, 202, 0.233);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-element-content {
+    padding: 4vh;
+}
+
+.in-box-image {
+    display: none;
+}
+
+/* IMAGE SOURCES */
+.image1 {
+    background-image: url(bilder/bild5.jpg);
+}
+
+.image2 {
+    background-image: url(bilder/bild2.jpg);
+}
+
+.image3 {
+    background-image: url(bilder/bild3.jpg);
+}
+
+.image4 {
+    background-image: url(bilder/bild1.jpg);
+}
+
+#textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+}
+
+#intro {
+    margin-right: 10vw;
+    margin-left: 10vw;
+    margin-top: 10vh;
+
+}
+
+/*RESPONSIVE*/
+
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    
+    @media(max-width:574px) {
+    .footer-col {
+        width: 100vw;
+    }
+}
+
+/*RESPONSIVE*/
+@media(max-width:800px) {
+    #question-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-image {
+        display: none;
+    }
+
+    .in-box-image {
+        display: block;
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #bild {
+        grid-column: 2/10;
+        grid-row: 2/8;
+        
+    }
+}
+
+@media screen and (max-width: 900px) {
+    div.nav-links {
+        display: none;
+    }
+    .nav-item a:hover{
+        background-color: rgba(169, 169, 231, 0.0,8);
+    }
+    .hamburger{
+        display: block;
+        position: relative;
+        z-index:999;
+    } 
+    #grid {
+        display:grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+                        "header"
+                        "top_right"
+                        "left"
+                        "bottom_right"
+                        "footer";
+        }   
+}
+   
+#divwrap {
+    flex-direction: column;
+}
+
+.wrapper{
+    margin-right: 30%;
+}
+
+.intro{
+    margin-right: 30%;
+}
+
+.rubrik {
+    font-size: 90%;
+    text-align: center;
+    grid-column: 2/10;
+    z-index: 1;
+}
+

@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*MAIN*/
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(5, 10vh);
+    grid-template-areas: "header header header header header header header hedaer header header"
+                        "wrapper wrapper wrapper wrapper wrapper wrapper wrapper wrapper wrapper warpper"
+                        "intro intro intro intro intro intro intro intro intro intro"
+                        "divwwrap divwwrap divwwrap divwwrap divwwrap divwwrap divwwrap divwwrap divwwrap divwwrap" 
+                        "footer footer  footer  footer  footer  footer  footer  footer  footer footer";
+    width: 100vw;
+}
+
+/*BILD*/
+#bild {
+    background-image: url(bilder/Tjejer.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 6/10;
+    grid-row: 2/5;
+}  
+
+/*RUBRIK*/
+.rubrik {
+    grid-column: 2/4;
+    grid-row: 1/3;
+    z-index: 1;
+    color: black;
+}
+
+/*TEXT*/
+
+#divwrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 10vw;
+    margin-top: 10vh;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    grid-area: left;
+    max-width: 100%;
+}
+
+#höger {
+    display: flex;
+    flex-direction: column;
+    grid-area: right;
+    max-width: 50%;
+}
+
+#intro {
+    border-bottom: 1px solid black;
+    
+    margin-right: 10vw;
+    margin-left: 10vw;
+    margin-top: 10vh;
+
+}
+
+.questions {
+    width: 40vw;
+    margin-right: 2.5vw;
+    text-align: justify;
+
+    
+}
+/*SLUT PÅ MAIN*/
+ 
+/*RESPONSIVE*/
+
+@media(max-width:800px) {
+    #divwrap {
+        flex-direction: column;
+    }
+    .questions {
+        width: 85vw;
+    }
+    #bild {
+        grid-column: 2/10;
+        grid-row: 2/8;
+    }
+
+    .rubrik {
+        color: #FAF9F6;
+    }
+
+}
